@@ -500,7 +500,25 @@
       text-transform: uppercase;
       color: var(--text-muted);
       margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
     }
+    .takedown-status {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.22rem 0.55rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      line-height: 1;
+    }
+    .takedown-status.mvp { background: rgba(67,160,71,0.14); color: var(--green); }
+    .takedown-status.partial { background: rgba(245,197,24,0.12); color: var(--yellow); }
+    .takedown-status.post { background: rgba(74,144,226,0.14); color: #4A90E2; }
+    .takedown-status.conditional { background: rgba(245,197,24,0.12); color: var(--yellow); }
     .takedown-replaces {
       font-size: 1.1rem;
       color: var(--text);
@@ -1173,7 +1191,7 @@
           In partnership with <span class="accent">APL Cargo</span>.
         </h1>
         <p class="hero-sub">
-          Founding ownership in a fleet AI platform positioned to replace <strong>Samsara, DAT, Motive, and JJ Keller</strong>. Samsara — already on APL's trucks — IPO'd at <strong>$12 billion</strong> doing less than what SuperTrucker does. MVP ships in 90 days. This is the partnership proposal.
+          Founding ownership in a fleet AI platform positioned to replace <strong>Samsara, DAT, Motive, and JJ Keller</strong>. Samsara — already on APL's trucks — IPO'd at <strong>$12 billion</strong> shipping a feature set SuperTrucker's MVP matches and extends. MVP ships in 90 days. This is the partnership proposal.
         </p>
       </div>
     </div>
@@ -1208,7 +1226,7 @@
   <section class="bg-surface">
     <div class="container">
       <div class="section-heading">The Note Up Front</div>
-      <h2 class="section-title">Hey Greg, Stephen —</h2>
+      <h2 class="section-title">Hey Greg, Stefan —</h2>
       <div class="opening-body">
         <p>Picking up where we left off. We talked about me building SuperTrucker out with APL as the design partner, and you've already said yes to giving me what I need to start. I've been holding on the driver application because getting on a truck right now pulls me away from this work during an AI gold rush. 2026 is the year of deliverables — carriers who ship AI-native tools this year own the decade, and we are only weeks away from having a product to launch. That trip needs to be about the software, not the truck.</p>
         <p>What follows is the operational detail — what I'm building, what the partnership looks like, and what I need from APL to make it real.</p>
@@ -1223,10 +1241,9 @@
       <h2 class="section-title">A conversation no development firm could have with you.</h2>
       <div class="section-body">
         <p>Ten years of driving trucks taught me exactly what trucking software gets wrong. It doesn't see the driver. It can't tell when an ELD department has introduced a compliance error through a manual log correction. It can't walk a driver through a pretrip the way someone who's been in the seat knows it should go.</p>
-        <p>I've been coding for the better part of three years now, working most nights in sleeper berths to build what I kept wishing existed while I was running freight. The result is <strong>SuperTrucker</strong> — a fleet AI platform that ships OTR Diagnostics functionality as a feature, ships an ELD that audits backwards through driver logs catching violations carriers don't know they have, and ships an AI agent marketplace built specifically for trucking.</p>
-        <p>Software at this scope normally costs a carrier between <strong>$50,000 and $200,000 a year</strong> in SaaS fees, or multiple quarters of agency-rate contract development to build from scratch. APL happened to have a driver who has been building it on her own time.</p>
-        <p>This is the offer: APL Cargo as the founding partner on SuperTrucker, prominently named, at the partnership terms no carrier signing after you will get. In exchange for a bootstrap-level investment and the inventory APL already has sitting in the shop, APL becomes the first carrier on the platform — at a price point that doesn't exist again after today.</p>
-        <p>Because no development firm has driven your trucks.</p>
+        <p>I've been coding for the better part of three years, working most nights in sleeper berths to build what I kept wishing existed while I was running freight. The result is <strong>SuperTrucker</strong> — a fleet AI platform that ships OTR Diagnostics functionality as a feature, an ELD that audits backwards through driver logs catching violations carriers don't know they have, and an AI agent marketplace built specifically for trucking.</p>
+        <p>Software at this scope normally costs carriers between <strong>$50,000 and $200,000 a year</strong> in SaaS fees, or multiple quarters of agency-rate contract development to build from scratch. No development firm on the market could have brought this to you — not because the engineering is missing, but because none of them have driven your trucks. APL happened to have a driver who has been building it on her own time.</p>
+        <p>The offer: APL Cargo as the founding partner on SuperTrucker, prominently named, at the partnership terms no carrier signing after you will get. In exchange for a bootstrap-level investment and the inventory APL already has sitting in the shop, APL becomes the first carrier on the platform — at a price point that doesn't exist again after today.</p>
       </div>
     </div>
   </section>
@@ -1345,8 +1362,8 @@
 
       <div class="founder-credential">
         <div class="founder-credential-eyebrow">Why This Founder, Not Another</div>
-        <p>Building this requires operational AI-research credibility most founders in this space don't have. I'm <strong>COO of the Multiverse School — a leader in AI education and research</strong> — and I bring direct ties to AI foundations that other builders in this category cannot credibly claim. That connection is load-bearing, not incidental: Common Ground's research architecture only works with someone who knows the AI research world the way I do.</p>
-        <p class="founder-credential-signoff">Greg, Stephen — you're not just partnering with a driver who codes. You're partnering with a driver who codes and runs the AI school, with research-community connections the rest of the category can't match.</p>
+        <p>Building this requires operational AI-research credibility most founders in this space don't have. <strong>I've been operating at COO-level inside AI education and research</strong>, with direct ties to AI foundations that other builders in this category cannot credibly claim. That connection is load-bearing, not incidental: Common Ground's research architecture only works with someone who knows the AI research world the way I do.</p>
+        <p class="founder-credential-signoff">Greg, Stefan — you're not just partnering with a driver who codes. You're partnering with a driver who codes and runs the AI school, with research-community connections the rest of the category can't match.</p>
       </div>
     </div>
   </section>
@@ -1362,43 +1379,43 @@
 
       <div class="takedown-list">
         <div class="takedown-card">
-          <div class="takedown-category">Fleet Telematics</div>
+          <div class="takedown-category">Fleet Telematics <span class="takedown-status partial">Partial at MVP · Full parity post-MVP</span></div>
           <p class="takedown-replaces">Replaces: <span class="vendors">Samsara, Motive, Geotab</span></p>
           <p class="takedown-deliver"><strong>SuperTrucker delivers everything Samsara does</strong> — ELD, GPS, dispatch, maintenance, safety alerts — <strong>plus</strong> AI-native workflows Samsara's 2019 architecture can't retrofit. Greg, you already pay for Samsara; this is the upgrade path.</p>
         </div>
 
         <div class="takedown-card">
-          <div class="takedown-category">Freight Load Board</div>
+          <div class="takedown-category">Freight Load Board <span class="takedown-status mvp">Ships at MVP</span></div>
           <p class="takedown-replaces">Replaces: <span class="vendors">DAT, Truckstop, 123Loadboard, Trucker Path</span></p>
           <p class="takedown-deliver"><strong>Common Ground is the load board for AI agents.</strong> Shipper agents post; carrier agents bid the instant it hits; winning bids route to the dispatcher for book/decline. No more $200-400/seat/month to refresh a list built for humans.</p>
         </div>
 
         <div class="takedown-card">
-          <div class="takedown-category">Electronic Logging Device</div>
+          <div class="takedown-category">Electronic Logging Device <span class="takedown-status mvp">Ships at MVP</span></div>
           <p class="takedown-replaces">Replaces: <span class="vendors">Motive (KeepTruckin), Geotab Drive, Samsara ELD, Garmin Fleet</span></p>
           <p class="takedown-deliver"><strong>Clockwatcher is the only ELD on the market that catches dispatcher-introduced log errors</strong> — the #1 DOT audit trigger. Retroactive audit, down to GPS coordinates, across tens of thousands of logbooks at once. Nothing else does this.</p>
         </div>
 
         <div class="takedown-card">
-          <div class="takedown-category">Safety &amp; Compliance Consulting</div>
+          <div class="takedown-category">Safety &amp; Compliance Consulting <span class="takedown-status post">Post-MVP (Guardian module)</span></div>
           <p class="takedown-replaces">Replaces: <span class="vendors">JJ Keller, CarriersEdge, Infinit-I, SambaSafety</span></p>
           <p class="takedown-deliver">Guardian (post-MVP) automates CSA score monitoring, DQ file management, incident workflows, and driver training coaching. What carriers currently pay safety-consulting firms <strong>five and six figures a year</strong> to handle, SuperTrucker handles as a software module.</p>
         </div>
 
         <div class="takedown-card">
-          <div class="takedown-category">Engine Diagnostics Software</div>
+          <div class="takedown-category">Engine Diagnostics Software <span class="takedown-status conditional">Ships at MVP in Plan A · Deferred in Plan C</span></div>
           <p class="takedown-replaces">Replaces: <span class="vendors">OTR Diagnostics, Nexiq e-Technician, JPRO by Noregon</span></p>
           <p class="takedown-deliver"><strong>SuperTrucker's Pretrip Assistant ships the ECM read as a feature</strong> — not a $500+/year aftermarket subscription. Same J1939 decode, same fault code library, same OEM-clean legal posture. Drivers get guided pretrip walkthrough and diagnostic readout in the same app they already use.</p>
         </div>
 
         <div class="takedown-card">
-          <div class="takedown-category">Internal ELD Departments</div>
+          <div class="takedown-category">Internal ELD Departments <span class="takedown-status mvp">Ships at MVP</span></div>
           <p class="takedown-replaces">Replaces: <span class="vendors">Manual log-correction staff, retroactive compliance review teams, third-party log auditors</span></p>
           <p class="takedown-deliver"><strong>This is the headline labor-cost replacement.</strong> Clockwatcher retroactively audits every driver log — catching the violations those departments hunt for manually <em>and</em> catching the errors those departments themselves introduce during corrections. That second category is the #1 DOT audit trigger. Midsize carriers staff entire rooms to chase what Clockwatcher does in the background.</p>
         </div>
 
         <div class="takedown-card">
-          <div class="takedown-category">Driver Recruitment &amp; Reputation</div>
+          <div class="takedown-category">Driver Recruitment &amp; Reputation <span class="takedown-status post">Post-MVP (Common Ground build-out)</span></div>
           <p class="takedown-replaces">Replaces: <span class="vendors">Tenstreet, HireRight, CDL Scan</span></p>
           <p class="takedown-deliver"><strong>Drivers become members of Common Ground.</strong> Their agents represent them — actively finding positions, negotiating pay, tracking reputation across every carrier they've driven for. CDL, medical card, endorsements, and employment history live on the driver's agent profile and travel with them. Recruiting flips: carriers stop scraping driver lists and cold-calling. Driver agents bring positions to their drivers. Reputation belongs to the driver, not the employer.</p>
         </div>
@@ -1460,7 +1477,7 @@
             <li>APL buys hardware directly from vendors — <strong>up to $10,759, as low as ~$5,659</strong> with APL inventory</li>
             <li><strong>$4,500 monthly retainer</strong> while I'm off the truck finishing the build (90 days, MVP-scoped)</li>
             <li>Full platform: Pretrip + OTR Diagnostics replacement + Clockwatcher ELD + Common Ground</li>
-            <li><strong>Perpetual 60-second handicap on every Common Ground post</strong> — loads, dedicated lanes, and shipper-direct contracts route to your agents first. Real-time dispatcher pings or auto-booking if pre-authorized. <em>Reserved for Greg and Stephen by name — APL today, any trucking operation you start in the future. Confidential · built into the code · never offered to subsequent carriers.</em></li>
+            <li><strong>Perpetual 60-second handicap on every Common Ground post</strong> — loads, dedicated lanes, and shipper-direct contracts route to your agents first. Real-time dispatcher pings or auto-booking if pre-authorized. <em>Reserved for Greg and Stefan by name — APL today, any trucking operation you start in the future. Confidential · built into the code · never offered to subsequent carriers.</em></li>
             <li>APL named as founding partner on every SuperTrucker material we ship</li>
             <li><strong>Equity interest in SuperTrucker</strong>; 100% stays between us — no dilution, no outside board seats</li>
           </ul>
@@ -1717,7 +1734,7 @@
         <li><strong>$4,500 monthly retainer</strong> while I'm off the truck finishing the build. This is the support I need to ship software that — once it's on APL's fleet and then the open carrier market — credibly clears <strong>hundreds of millions of dollars</strong> in platform revenue. Fleet AI is a category forming in 2026; $4,500/month keeps the founder building instead of driving while that window is open.</li>
         <li><strong>Office space in Indiana with shop access</strong> for the two-week on-site phase.</li>
         <li><strong>A non-binding Letter of Intent for the 5,000 trucks.</strong> Does two jobs — it's the signal that this rolls out to the full fleet when MVP ships, and if Plan A (APL funding) isn't a fit, the LOI is what I take out to raise seed capital elsewhere. Non-committal either way.</li>
-        <li><strong>Stephen on a 30-minute call</strong> with you and me this week, before I fly out, so he's plugged into the roadmap from day one.</li>
+        <li><strong>Stefan on a 30-minute call</strong> with you and me this week, before I fly out, so he's plugged into the roadmap from day one.</li>
       </ol>
     </div>
   </section>
@@ -1744,14 +1761,14 @@
             <p>Every new post that hits Common Ground — <strong>loads, dedicated lanes, shipper-direct contracts, broker RFPs, all of it</strong> — is routed to APL's agents first, for a full sixty seconds, before the general pool sees it.</p>
             <p><strong>Think of it as a golf handicap. Or a cheat code.</strong> APL tees off before everyone else, every time. If APL's parameters say yes — right lane, right rate, right equipment, HOS window clean — two things can happen, your choice: (1) the agent pings the right dispatcher <strong>in real time</strong> with a live one that needs action now, or (2) if you've pre-authorized, the agent books it on APL's behalf automatically. No "we'll handle it this morning" delay. The agent is always on.</p>
             <p>If APL's parameters say no, the post drops into the open pool at the 60-second mark and other carriers see it. APL never knows they had the lead. Everyone downstream plays normally.</p>
-            <p>This perk is <strong>perpetual</strong> — every new post, for as long as Common Ground runs. And it follows the people, not the entity: <strong>the cheat code is reserved for Greg and Stephen by name</strong>. APL Cargo today. Any trucking operation you two start tomorrow, next year, or a decade from now. The perk goes with you.</p>
+            <p>This perk is <strong>perpetual</strong> — every new post, for as long as Common Ground runs. And it follows the people, not the entity: <strong>the cheat code is reserved for Greg and Stefan by name</strong>. APL Cargo today. Any trucking operation you two start tomorrow, next year, or a decade from now. The perk goes with you.</p>
             <p>It is also <strong>not publicly documented</strong>. Built into Common Ground's routing layer at the code level, never mentioned in external marketing, never offered to subsequent carriers. That's what "first carrier on the new load board" actually means. Not a line in a brochure. Structural preferential routing, forever, in writing between us.</p>
           </div>
         </div>
       </div>
 
       <ul class="benefits">
-        <li><strong>60-second handicap on every Common Ground post</strong> — structural first-dibs on new loads, dedicated lanes, and shipper-direct contracts, in perpetuity. Your agents see every post before anyone else and either notify your dispatchers in real time or auto-book when pre-authorized. <strong>Reserved for Greg and Stephen by name</strong> — APL Cargo today and any trucking company you start in the future. Built into the code, confidential, never offered to subsequent carriers.</li>
+        <li><strong>60-second handicap on every Common Ground post</strong> — structural first-dibs on new loads, dedicated lanes, and shipper-direct contracts, in perpetuity. Your agents see every post before anyone else and either notify your dispatchers in real time or auto-book when pre-authorized. <strong>Reserved for Greg and Stefan by name</strong> — APL Cargo today and any trucking company you start in the future. Built into the code, confidential, never offered to subsequent carriers.</li>
         <li><strong>Named prominently</strong> in all SuperTrucker materials, public case study, and marketing as the founding design partner.</li>
         <li><strong>Roadmap input</strong> — quarterly review of feature priorities for as long as APL operates the platform.</li>
         <li><strong>Preferred pricing in perpetuity</strong> — pricing tier no carrier signing after APL will receive.</li>
