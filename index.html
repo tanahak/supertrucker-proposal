@@ -1,0 +1,1858 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SuperTrucker × APL Cargo — Founding Partnership Proposal</title>
+  <meta name="description" content="Fleet AI platform founding partnership proposal from Carso Cybernetics to APL Cargo.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" type="image/png" href="images/carso-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #111111;
+      --navy-light: #161619;
+      --surface: #1C1C1E;
+      --surface-light: #242426;
+      --text: #F5F5F0;
+      --text-muted: #B0B8C1;
+      --slate: #3D4F5F;
+      --yellow: #F5C518;
+      --yellow-hover: #E0B400;
+      --yellow-glow: rgba(245, 197, 24, 0.15);
+      --yellow-subtle: rgba(245, 197, 24, 0.08);
+      --red: #E53935;
+      --green: #43A047;
+      --glass: rgba(28, 28, 30, 0.6);
+      --glass-border: rgba(245, 197, 24, 0.1);
+      --border: rgba(176, 184, 193, 0.15);
+      --border-light: rgba(176, 184, 193, 0.22);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      font-weight: 400;
+      color: var(--text);
+      background: var(--navy);
+      overflow-x: hidden;
+      min-width: 320px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1, h2, h3, h4, h5, h6 { line-height: 1.2; font-weight: 700; color: var(--text); }
+
+    a { color: var(--yellow); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--yellow-hover); }
+
+    .num { font-variant-numeric: tabular-nums; }
+
+    section { padding: 4rem 1.25rem; position: relative; border-top: 1px solid var(--border); }
+    section:first-of-type { border-top: none; }
+    @media (min-width: 768px) { section { padding: 6rem 1.5rem; } }
+
+    .container { max-width: 1100px; margin: 0 auto; width: 100%; }
+
+    .section-heading {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .section-title .accent { color: var(--yellow); }
+    .section-body { font-size: 1.05rem; color: var(--text-muted); line-height: 1.75; max-width: 720px; }
+    .section-body p { margin-bottom: 1rem; }
+    .section-body p:last-child { margin-bottom: 0; }
+    .section-body strong { color: var(--text); font-weight: 600; }
+
+    .bg-surface { background: var(--surface); }
+    .bg-bg { background: var(--navy); }
+
+    /* Buttons */
+    .btn-primary, .btn-secondary, .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .btn-primary { background: var(--yellow); color: #111; border-color: var(--yellow); }
+    .btn-primary:hover { background: var(--yellow-hover); color: #111; border-color: var(--yellow-hover); }
+    .btn-secondary { background: transparent; color: var(--text); border-color: var(--border-light); }
+    .btn-secondary:hover { border-color: var(--yellow); color: var(--yellow); }
+    .btn-ghost { background: transparent; color: var(--text); border-color: rgba(255,255,255,0.25); }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1rem 1.25rem;
+      transition: background 0.3s, padding 0.3s;
+    }
+    .navbar.scrolled {
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.65rem 1.25rem;
+    }
+    .navbar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--text);
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      font-size: 0.95rem;
+    }
+    .navbar-brand img { height: 40px; width: auto; }
+    .navbar-links { display: none; gap: 1.75rem; align-items: center; }
+    .navbar-links a { color: var(--text-muted); font-size: 0.85rem; font-weight: 500; }
+    .navbar-links a:hover { color: var(--text); }
+    .nav-cta { color: var(--yellow) !important; font-weight: 700 !important; }
+    .nav-cheat { color: var(--yellow) !important; font-weight: 700 !important; position: relative; }
+    .nav-cheat::before { content: "⚡"; margin-right: 0.25rem; }
+    @media (min-width: 900px) { .navbar-links { display: flex; } }
+
+    /* Hero — full-bleed image + dark gradients */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: 0;
+      border-top: none;
+      background: var(--navy);
+    }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 70% center;
+    }
+    .hero-overlay-top {
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 50%;
+      background: linear-gradient(to bottom, rgba(17,17,17,0.9) 0%, rgba(17,17,17,0.55) 55%, transparent 100%);
+      pointer-events: none;
+    }
+    .hero-overlay-bottom {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 55%;
+      background: linear-gradient(to top, rgba(17,17,17,0.95) 0%, rgba(17,17,17,0.6) 45%, transparent 100%);
+      pointer-events: none;
+    }
+    .hero-top {
+      position: relative;
+      z-index: 1;
+      padding: 7rem 1.5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero-bottom {
+      position: relative;
+      z-index: 1;
+      padding: 2rem 1.5rem 2.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-partnership {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.6rem, 1.3vw, 1.25rem);
+      margin-bottom: 2rem;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      max-width: 620px;
+    }
+    .hero-partnership .logo-carso {
+      width: clamp(110px, 22vw, 240px);
+      height: auto;
+      display: block;
+      flex-shrink: 1;
+      filter: drop-shadow(0 8px 50px rgba(0,0,0,0.85));
+    }
+    .hero-partnership .logo-apl {
+      width: clamp(110px, 22vw, 240px);
+      aspect-ratio: 1 / 1;
+      height: auto;
+      border-radius: 50%;
+      object-fit: cover;
+      clip-path: circle(47% at 50% 50%);
+      flex-shrink: 1;
+      filter: drop-shadow(0 8px 50px rgba(0,0,0,0.85));
+    }
+    .hero-partnership .partnership-label {
+      color: var(--yellow);
+      font-size: clamp(0.65rem, 0.95vw, 0.85rem);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1.3;
+      text-align: center;
+      flex-shrink: 0;
+      padding: 0 0.6rem;
+      filter: drop-shadow(0 0 14px rgba(245,197,24,0.5));
+      white-space: nowrap;
+    }
+    @media (max-width: 600px) {
+      .hero-partnership .partnership-label { font-size: 0.6rem; letter-spacing: 0.08em; padding: 0 0.4rem; }
+    }
+
+    .hero-text-backdrop {
+      display: inline-block;
+      max-width: 760px;
+      padding: 1.75rem 2rem;
+      background: rgba(10, 10, 12, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      margin-top: 0.5rem;
+    }
+    .hero-text-backdrop .hero-badge { margin-bottom: 1rem; }
+    .hero-text-backdrop .hero-title { text-shadow: none; margin-bottom: 1rem; }
+    .hero-text-backdrop .hero-sub { text-shadow: none; color: var(--text); }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      padding: 0.45rem 1.1rem;
+      background: var(--yellow-subtle);
+      border: 1px solid var(--glass-border);
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--yellow);
+      box-shadow: 0 0 8px var(--yellow);
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      margin-bottom: 1.25rem;
+      max-width: 720px;
+      text-shadow: 0 2px 30px rgba(0,0,0,0.7);
+    }
+    .hero-title .accent { color: var(--yellow); }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 560px;
+      margin-bottom: 0;
+      text-shadow: 0 1px 20px rgba(0,0,0,0.7);
+    }
+
+    .hero-bottom-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 1rem 1.5rem;
+      background: rgba(17,17,17,0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+    }
+    .hero-stat { min-width: 0; }
+    .hero-stat.replaces { flex: 1.4; }
+    .hero-stat-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); font-weight: 600; margin-bottom: 0.25rem; white-space: nowrap; }
+    .hero-stat-value { font-size: 1rem; font-weight: 800; color: var(--text); font-variant-numeric: tabular-nums; line-height: 1.25; }
+    .hero-stat.replaces .hero-stat-value { font-size: 0.9rem; font-weight: 700; letter-spacing: 0.01em; }
+    .hero-stat-value .accent { color: var(--yellow); font-size: 1.25rem; }
+    .hero-stat-divider { width: 1px; height: 40px; background: var(--border); flex-shrink: 0; }
+    @media (max-width: 600px) {
+      .hero-stats { width: 100%; gap: 1.25rem; padding: 0.85rem 1rem; }
+      .hero-actions { width: 100%; }
+      .hero-actions .btn-primary, .hero-actions .btn-secondary { flex: 1; justify-content: center; }
+    }
+
+    /* Personal opening */
+    .opening-body {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      max-width: 760px;
+      color: var(--text);
+    }
+    .opening-body p { margin-bottom: 1.25rem; }
+    .opening-body p:last-child { margin-bottom: 0; }
+
+    /* Product cards */
+    .product-list { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    .product-card {
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem;
+    }
+    .bg-surface .product-card { background: var(--navy); }
+    .product-head { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+    .product-name {
+      font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+    .product-status {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.65rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .product-status.working { background: rgba(67,160,71,0.15); color: var(--green); }
+    .product-status.build { background: rgba(229,57,53,0.15); color: var(--red); }
+    .product-status.soon { background: rgba(61,79,95,0.35); color: var(--text-muted); }
+    .product-tagline { font-size: 1.05rem; color: var(--yellow); font-weight: 700; margin-bottom: 0.85rem; }
+    .product-desc { font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; }
+    .product-desc p { margin-bottom: 0.85rem; }
+    .product-desc p:last-child { margin-bottom: 0; }
+
+    /* Roadmap grid */
+    .roadmap-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem; }
+    .roadmap-card {
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+    }
+    .bg-surface .roadmap-card { background: var(--navy); }
+    .roadmap-card h4 { font-size: 0.95rem; font-weight: 800; color: var(--text); margin-bottom: 0.5rem; letter-spacing: 0.02em; text-transform: uppercase; }
+    .roadmap-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+    .roadmap-card.emphasized { border-left: 3px solid var(--yellow); background: linear-gradient(90deg, var(--yellow-subtle), var(--surface-light) 40%); }
+    .bg-surface .roadmap-card.emphasized { background: linear-gradient(90deg, var(--yellow-subtle), var(--navy) 40%); }
+    @media (min-width: 768px) {
+      .roadmap-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+      .roadmap-card.emphasized { grid-column: 1 / -1; }
+    }
+
+    /* Partnership 100% */
+    .pie-visual {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .bg-surface .pie-visual { background: var(--navy); }
+    .pie-circle {
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #FFE066, var(--yellow) 55%, #8A6E00 100%);
+      color: #111;
+      font-weight: 900;
+      font-size: 1.25rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 0 40px var(--yellow-glow);
+    }
+    .pie-label { color: var(--text); font-weight: 600; font-size: 1rem; }
+    .pie-label span { display: block; color: var(--text-muted); font-weight: 400; font-size: 0.9rem; margin-top: 0.25rem; }
+
+    /* Founder credential callout (Research / LinkedIn section) */
+    .founder-credential {
+      margin-top: 2.5rem;
+      padding: 1.75rem 2rem;
+      background: linear-gradient(135deg, var(--yellow-subtle), var(--surface-light) 65%);
+      border: 1px solid var(--glass-border);
+      border-left: 3px solid var(--yellow);
+      border-radius: 10px;
+    }
+    .bg-surface .founder-credential { background: linear-gradient(135deg, var(--yellow-subtle), var(--navy) 65%); }
+    .founder-credential-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 0.85rem;
+    }
+    .founder-credential p {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin: 0 0 0.85rem;
+    }
+    .founder-credential p:last-child { margin-bottom: 0; }
+    .founder-credential strong { color: var(--yellow); font-weight: 700; }
+    .founder-credential-signoff {
+      margin-top: 1rem !important;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted) !important;
+      font-style: italic;
+    }
+    .founder-credential-signoff strong { color: var(--text) !important; }
+
+    /* Category takedown */
+    .takedown-list { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+    .takedown-card {
+      padding: 1.5rem 1.75rem;
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      border-left: 3px solid var(--red);
+    }
+    .bg-surface .takedown-card { background: var(--navy); }
+    .takedown-category {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .takedown-replaces {
+      font-size: 1.1rem;
+      color: var(--text);
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      line-height: 1.35;
+    }
+    .takedown-replaces .vendors {
+      color: var(--red);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    .takedown-deliver {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .takedown-deliver strong { color: var(--text); font-weight: 700; }
+    .takedown-exclude {
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .takedown-exclude strong { color: var(--text); font-weight: 700; }
+
+    .ai-first-summary {
+      margin-top: 2rem;
+      padding: 2rem 2.25rem;
+      background: linear-gradient(135deg, var(--yellow-subtle), var(--surface-light) 70%);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      text-align: center;
+    }
+    .bg-surface .ai-first-summary { background: linear-gradient(135deg, var(--yellow-subtle), var(--navy) 70%); }
+    .ai-first-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 0.85rem;
+    }
+    .ai-first-summary p {
+      font-size: 1.15rem;
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .ai-first-summary strong { color: var(--yellow); font-weight: 700; }
+
+    /* Versus grid (load board comparison) */
+    .versus-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin: 2rem 0 2.5rem;
+    }
+    @media (min-width: 768px) { .versus-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; } }
+    .versus-card {
+      padding: 1.75rem;
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .bg-surface .versus-card { background: var(--navy); }
+    .versus-card.old {
+      border-left: 3px solid var(--text-muted);
+      opacity: 0.95;
+    }
+    .versus-card.new {
+      border-left: 3px solid var(--yellow);
+      background: linear-gradient(135deg, var(--yellow-subtle), var(--surface-light) 55%);
+    }
+    .bg-surface .versus-card.new { background: linear-gradient(135deg, var(--yellow-subtle), var(--navy) 55%); }
+    .versus-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .versus-card.old .versus-label { color: var(--text-muted); }
+    .versus-card.new .versus-label { color: var(--yellow); }
+    .versus-list { list-style: none; padding: 0; margin: 0; }
+    .versus-list li {
+      padding: 0.55rem 0 0.55rem 1.5rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      position: relative;
+    }
+    .versus-list li strong { color: var(--text); font-weight: 700; }
+    .versus-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0; top: 0.55rem;
+      font-weight: 700;
+    }
+    .versus-card.old .versus-list li::before { color: var(--text-muted); }
+    .versus-card.new .versus-list li::before { color: var(--yellow); }
+
+    .subsection-title {
+      font-size: clamp(1.35rem, 2.8vw, 1.9rem);
+      font-weight: 800;
+      color: var(--text);
+      margin: 3rem 0 1rem;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    .subsection-title .accent { color: var(--yellow); }
+
+    .loadboard-outcome {
+      margin-top: 2rem;
+      padding: 1.5rem 1.75rem;
+      background: var(--yellow-subtle);
+      border-left: 3px solid var(--yellow);
+      border-radius: 0 10px 10px 0;
+    }
+    .loadboard-outcome p {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .loadboard-outcome strong { color: var(--yellow); }
+
+    /* Paths grid */
+    .paths-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin: 1.5rem 0 2rem; }
+    @media (min-width: 768px) {
+      .paths-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .path-card.fallback { grid-column: 1 / -1; }
+    }
+    .path-card {
+      padding: 1.75rem;
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .bg-surface .path-card { background: var(--navy); }
+    .path-card.preferred {
+      border-left: 3px solid var(--yellow);
+      background: linear-gradient(135deg, var(--yellow-subtle), var(--surface-light) 50%);
+    }
+    .bg-surface .path-card.preferred { background: linear-gradient(135deg, var(--yellow-subtle), var(--navy) 50%); }
+    .path-card.alt {
+      border-left: 3px solid var(--blue-light, #4A90E2);
+    }
+    .path-card.alt .path-label { color: var(--text); }
+    .path-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .path-card.preferred .path-label { color: var(--yellow); }
+    .path-card.fallback .path-label { color: var(--text-muted); }
+    .path-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    .path-return {
+      font-size: 0.9rem;
+      color: var(--yellow);
+      font-weight: 600;
+      line-height: 1.55;
+      margin: 0 0 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .path-card.fallback .path-return { color: var(--text-muted); }
+
+    /* Handicap callout — 60-second lead time */
+    .handicap-callout {
+      margin: 1rem 0 2.5rem;
+      padding: 2.25rem 2.5rem;
+      background: linear-gradient(135deg, var(--yellow-subtle), var(--surface-light) 60%);
+      border: 2px solid var(--yellow);
+      border-radius: 14px;
+      box-shadow: 0 0 50px rgba(245,197,24,0.12);
+    }
+    .bg-surface .handicap-callout { background: linear-gradient(135deg, var(--yellow-subtle), var(--navy) 60%); }
+    .handicap-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 0.75rem;
+    }
+    .handicap-title {
+      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      margin-bottom: 0.75rem;
+    }
+    .handicap-title .accent { color: var(--yellow); }
+    .handicap-subhead {
+      font-size: 1.1rem;
+      color: var(--yellow);
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 1.75rem;
+      letter-spacing: -0.005em;
+    }
+    .handicap-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .handicap-body { grid-template-columns: 240px 1fr; gap: 2.5rem; align-items: center; }
+    }
+    .handicap-stat {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: rgba(245,197,24,0.08);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+    }
+    .handicap-number {
+      font-size: clamp(4.5rem, 9vw, 6rem);
+      font-weight: 900;
+      color: var(--yellow);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.04em;
+      display: inline-block;
+    }
+    .handicap-unit {
+      font-size: 0.32em;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-left: 0.15em;
+      vertical-align: super;
+    }
+    .handicap-stat-label {
+      margin-top: 0.85rem;
+      font-size: 0.85rem;
+      color: var(--text);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .handicap-text p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .handicap-text p:last-child { margin-bottom: 0; }
+    .handicap-text strong { color: var(--text); font-weight: 700; }
+    .path-list { list-style: none; padding: 0; margin: 0; }
+    .path-list li {
+      padding: 0.5rem 0 0.5rem 1.75rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      position: relative;
+    }
+    .path-list li strong { color: var(--text); font-weight: 700; }
+    .path-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0; top: 0.5rem;
+      font-weight: 700;
+    }
+    .path-card.preferred .path-list li::before { color: var(--yellow); }
+    .path-card.fallback .path-list li::before { color: var(--text-muted); }
+
+    /* Procurement */
+    .proc-lead {
+      font-size: 1.1rem;
+      color: var(--text);
+      padding: 1rem 1.25rem;
+      background: var(--yellow-subtle);
+      border-left: 3px solid var(--yellow);
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .proc-lead strong { color: var(--yellow); }
+    .procurement-layout { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: start; margin-top: 1rem; }
+    @media (min-width: 900px) { .procurement-layout { grid-template-columns: 1fr 320px; gap: 2rem; } }
+
+    .plan-c-callout {
+      margin-top: 2.5rem;
+      padding: 2rem 2.25rem;
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-left: 3px solid #4A90E2;
+      border-radius: 10px;
+    }
+    .bg-surface .plan-c-callout { background: var(--navy); }
+    .plan-c-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #4A90E2;
+      margin-bottom: 0.6rem;
+    }
+    .plan-c-title {
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    .plan-c-callout p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .plan-c-list { list-style: none; padding: 0; margin: 0 0 1rem; }
+    .plan-c-list li {
+      padding: 0.45rem 0 0.45rem 1.75rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      position: relative;
+    }
+    .plan-c-list li strong { color: var(--text); font-weight: 700; }
+    .plan-c-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0; top: 0.45rem;
+      color: #4A90E2;
+      font-weight: 700;
+    }
+    .plan-c-note {
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted) !important;
+      font-style: italic;
+      margin-bottom: 0 !important;
+    }
+
+    .proc-group {
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .bg-surface .proc-group { background: var(--navy); }
+    .proc-group h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 0.85rem;
+    }
+    .proc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+    }
+    .proc-item:last-child { border-bottom: none; }
+    .proc-item input[type="checkbox"] {
+      width: 20px; height: 20px;
+      margin-top: 2px;
+      accent-color: var(--yellow);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .proc-item-label { flex: 1; font-size: 0.95rem; line-height: 1.5; color: var(--text); }
+    .proc-item-saving {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+      letter-spacing: 0.02em;
+    }
+    .proc-group-note { font-size: 0.85rem; color: var(--text-muted); margin: 0 0 0.85rem; line-height: 1.5; font-style: italic; }
+    .proc-item.fixed { cursor: default; }
+    .proc-item.fixed .proc-bullet { color: var(--text-muted); width: 20px; text-align: center; font-size: 0.6rem; margin-top: 6px; flex-shrink: 0; }
+    .proc-item.fixed .proc-item-cost { color: var(--text); font-weight: 700; font-size: 0.9rem; white-space: nowrap; flex-shrink: 0; }
+    .proc-item.fixed.subtotal { border-top: 1px solid var(--border-light); margin-top: 0.5rem; padding-top: 0.85rem; }
+    .proc-item.fixed.subtotal .proc-item-cost { color: var(--yellow); font-size: 1rem; }
+    .proc-item.non-monetary .proc-item-saving {
+      color: var(--yellow);
+      font-style: italic;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.7rem;
+    }
+    .proc-item input[type="checkbox"]:checked + .proc-item-label { color: var(--text); opacity: 0.65; text-decoration: line-through; }
+
+    .totals-panel {
+      position: sticky;
+      top: 6rem;
+      background: var(--surface-light);
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+    .bg-surface .totals-panel { background: var(--navy); }
+    .totals-panel h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 1rem;
+    }
+    .totals-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6rem; font-size: 0.9rem; gap: 0.5rem; }
+    .totals-row .label { color: var(--text-muted); }
+    .totals-row .value { font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+    .totals-row.savings .value { color: var(--green); }
+    .totals-divider { height: 1px; background: var(--border); margin: 0.85rem 0; }
+    .totals-row.grand { font-size: 0.95rem; margin-top: 0.25rem; }
+    .totals-row.grand .label { color: var(--text); font-weight: 700; letter-spacing: 0.02em; }
+    .totals-row.grand .value { color: var(--yellow); font-size: 1.75rem; font-weight: 900; }
+
+    .totals-retainer {
+      margin-top: 1.25rem;
+      padding: 1rem;
+      background: var(--yellow-subtle);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .totals-retainer-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+    .totals-retainer-value {
+      font-weight: 900;
+      color: var(--yellow);
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 0.15rem;
+    }
+    .totals-retainer-value .amt { font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+    .totals-retainer-value .per { font-size: 0.9rem; color: var(--text-muted); font-weight: 600; }
+    .totals-retainer-note {
+      margin-top: 0.35rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .send-btn-wrap { margin-top: 1.25rem; }
+    .send-note-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+    .send-note-input {
+      width: 100%;
+      background: var(--navy);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 0.85rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      resize: vertical;
+      min-height: 70px;
+      margin-bottom: 0.85rem;
+      transition: border-color 0.15s;
+    }
+    .send-note-input:focus {
+      outline: none;
+      border-color: var(--yellow);
+    }
+    .send-note-input::placeholder { color: var(--text-muted); opacity: 0.6; }
+    .btn-full { width: 100%; }
+    .fallback { margin-top: 0.85rem; font-size: 0.8rem; color: var(--text-muted); text-align: center; }
+    .fallback button {
+      background: none; border: none; color: var(--yellow);
+      text-decoration: underline; cursor: pointer; font: inherit; padding: 0;
+    }
+    .fallback button:hover { color: var(--yellow); }
+    .copied-note { display: none; margin-top: 0.5rem; color: var(--green); font-weight: 600; }
+    .copied-note.show { display: block; }
+
+    @media (max-width: 899px) {
+      .totals-panel { position: static; }
+    }
+
+    /* Deliverables */
+    .deliverables {
+      list-style: none;
+      counter-reset: deliver;
+      padding: 0; margin: 0;
+    }
+    .deliverables li {
+      counter-increment: deliver;
+      padding: 1rem 0 1rem 3rem;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .deliverables li:last-child { border-bottom: none; }
+    .deliverables li::before {
+      content: counter(deliver, decimal-leading-zero);
+      position: absolute;
+      left: 0; top: 1rem;
+      font-family: 'Inter', monospace;
+      font-size: 0.85rem;
+      font-weight: 900;
+      color: var(--yellow);
+      letter-spacing: 0.05em;
+    }
+    .deliverables li strong { color: var(--text); font-weight: 700; }
+
+    /* Benefits */
+    .benefits { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+    @media (min-width: 768px) { .benefits { grid-template-columns: 1fr 1fr; gap: 1rem; } }
+    .benefits li {
+      padding: 1rem 1.25rem 1rem 2.5rem;
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      position: relative;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .bg-surface .benefits li { background: var(--navy); }
+    .benefits li::before {
+      content: "✓";
+      position: absolute;
+      left: 1rem; top: 1rem;
+      color: var(--yellow);
+      font-weight: 900;
+      font-size: 0.95rem;
+    }
+    .benefits li strong { color: var(--text); font-weight: 700; }
+
+    /* Indiana callout */
+    .indiana-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+    @media (min-width: 768px) { .indiana-grid { grid-template-columns: repeat(3, 1fr); } }
+    .indiana-card {
+      padding: 1.25rem;
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      border-left: 3px solid var(--yellow);
+    }
+    .bg-surface .indiana-card { background: var(--navy); }
+    .indiana-card h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--yellow); margin-bottom: 0.5rem; font-weight: 700; }
+    .indiana-card p { font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background: var(--navy);
+      padding: 6rem 1.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%; height: 200%;
+      background: radial-gradient(ellipse, var(--yellow-glow) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .cta-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+    .cta-lead { font-size: 1.05rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; }
+    .cta-title { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 2rem; color: var(--text); }
+    .cta-title .accent { color: var(--yellow); }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* Footer */
+    footer { background: #050505; border-top: 1px solid var(--border); padding: 2.5rem 1.25rem; text-align: center; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .footer-logos { display: flex; align-items: center; gap: 1rem; }
+    .footer-logos { gap: 1.25rem; }
+    .footer-logos .logo-carso { height: 56px; width: auto; }
+    .footer-logos .logo-apl { height: 56px; width: 56px; border-radius: 50%; object-fit: cover; clip-path: circle(47% at 50% 50%); }
+    .footer-logos .partnership-label { color: var(--yellow); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; line-height: 1.3; text-align: center; }
+    .footer-text { color: var(--text-muted); font-size: 0.85rem; }
+    .footer-text a { color: var(--yellow); }
+    .footer-meta { color: var(--text-muted); opacity: 0.6; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* Print */
+    @media print {
+      body { background: #fff; color: #000; }
+      section { page-break-inside: avoid; border-top: 1px solid #ccc; padding: 1.5rem 0; }
+      .navbar, .cta-buttons, .send-btn-wrap, .fallback, .hero-actions { display: none !important; }
+      .hero, .cta, footer { background: #fff !important; }
+      .hero-title, .hero-sub, .section-title, .section-body, .cta-title, .cta-lead, .product-name, .product-desc, .deliverables li, .benefits li, footer * { color: #000 !important; }
+      .totals-panel, .product-card, .roadmap-card, .benefits li, .proc-group, .pie-visual, .indiana-card { background: #fff !important; border-color: #ccc !important; }
+      .hero-visual { border-color: #ccc !important; box-shadow: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#top" class="navbar-brand">
+        <img src="images/carso-logo.png" alt="Carso Cybernetics">
+        <span>SUPERTRUCKER × APL</span>
+      </a>
+      <div class="navbar-links">
+        <a href="#platform">Platform</a>
+        <a href="#loadboard">Load Board</a>
+        <a href="#research">Research</a>
+        <a href="#takedown">Replaces</a>
+        <a href="#cheat-code" class="nav-cheat">Cheat Code</a>
+        <a href="#partnership">Partnership</a>
+        <a href="#procurement">Procurement</a>
+        <a href="#deliver" class="nav-cta">Next Steps</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-bg">
+      <img src="images/hero.jpg" class="hero-image" alt="Driver using SuperTrucker pretrip assistant on a Peterbilt fleet truck">
+      <div class="hero-overlay-top"></div>
+      <div class="hero-overlay-bottom"></div>
+    </div>
+
+    <div class="hero-top">
+      <div class="hero-partnership">
+        <img src="images/carso-logo.png" alt="Carso Cybernetics" class="logo-carso">
+        <span class="partnership-label">in<br>partnership<br>with</span>
+        <img src="images/apl-logo.jpeg" alt="APL Cargo" class="logo-apl">
+      </div>
+      <div class="hero-text-backdrop">
+        <div class="hero-badge">Founding Partnership · April 2026</div>
+        <h1 class="hero-title">
+          Built by a driver.<br>
+          In partnership with <span class="accent">APL Cargo</span>.
+        </h1>
+        <p class="hero-sub">
+          Founding ownership in a fleet AI platform positioned to replace <strong>Samsara, DAT, Motive, and JJ Keller</strong>. Samsara — already on APL's trucks — IPO'd at <strong>$12 billion</strong> doing less than what SuperTrucker does. MVP ships in 90 days. This is the partnership proposal.
+        </p>
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <div class="hero-bottom-inner">
+        <div class="hero-actions">
+          <a href="#procurement" class="btn-primary">See the Procurement List</a>
+          <a href="#platform" class="btn-secondary">What's Shipping</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat replaces">
+            <div class="hero-stat-label">Replaces</div>
+            <div class="hero-stat-value">Samsara · DAT · Motive · JJ Keller</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-label">Samsara IPO comp</div>
+            <div class="hero-stat-value"><span class="accent">$12B+</span></div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-label">MVP launch</div>
+            <div class="hero-stat-value"><span class="accent">90 days</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PERSONAL OPENING -->
+  <section class="bg-surface">
+    <div class="container">
+      <div class="section-heading">The Note Up Front</div>
+      <h2 class="section-title">Hey Greg —</h2>
+      <div class="opening-body">
+        <p>Picking up where we left off. We talked about me building SuperTrucker out with APL as the design partner, and you've already said yes to giving me what I need to start. I've been holding on the driver application because getting on a truck right now pulls me away from this work during an AI gold rush. 2026 is the year of deliverables — carriers who ship AI-native tools this year own the decade, and we are only weeks away from having a product to launch. That trip needs to be about the software, not the truck.</p>
+        <p>What follows is the operational detail — what I'm building, what the partnership looks like, and what I need from APL to make it real.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE OPPORTUNITY -->
+  <section>
+    <div class="container">
+      <div class="section-heading">The Opportunity</div>
+      <h2 class="section-title">A conversation no development firm could have with you.</h2>
+      <div class="section-body">
+        <p>Ten years of driving trucks taught me exactly what trucking software gets wrong. It doesn't see the driver. It can't tell when an ELD department has introduced a compliance error through a manual log correction. It can't walk a driver through a pretrip the way someone who's been in the seat knows it should go.</p>
+        <p>I've been coding for the better part of three years now, working most nights in sleeper berths to build what I kept wishing existed while I was running freight. The result is <strong>SuperTrucker</strong> — a fleet AI platform that ships OTR Diagnostics functionality as a feature, ships an ELD that audits backwards through driver logs catching violations carriers don't know they have, and ships an AI agent marketplace built specifically for trucking.</p>
+        <p>Software at this scope normally costs a carrier between <strong>$50,000 and $200,000 a year</strong> in SaaS fees, or multiple quarters of agency-rate contract development to build from scratch. APL happened to have a driver who has been building it on her own time.</p>
+        <p>This is the offer: APL Cargo as the founding partner on SuperTrucker, prominently named, at the partnership terms no carrier signing after you will get. In exchange for a bootstrap-level investment and the inventory APL already has sitting in the shop, APL becomes the first carrier on the platform — at a price point that doesn't exist again after today.</p>
+        <p>Because no development firm has driven your trucks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PLATFORM -->
+  <section id="platform" class="bg-surface">
+    <div class="container">
+      <div class="section-heading">What's Shipping</div>
+      <h2 class="section-title">Three modules. Built around <span class="accent">your</span> fleet first.</h2>
+      <div class="section-body" style="margin-bottom:2rem;">
+        <p>APL runs Freightliner and Mack. That means Detroit DD15 and Mack MP are the first two engine families we build against. SuperTrucker ships on APL's trucks before anyone else's.</p>
+      </div>
+
+      <div class="product-list">
+        <div class="product-card">
+          <div class="product-head">
+            <span class="product-name">Pretrip Assistant</span>
+            <span class="product-status working">Voice/Vision Live</span>
+            <span class="product-status build">ECM Read in Build</span>
+          </div>
+          <p class="product-tagline">OTR Diagnostics — as a feature, not a product.</p>
+          <div class="product-desc">
+            <p>A voice/vision model that walks the driver through a full pretrip inspection, answering questions in real time and connecting instantly to the shop for video chat — so Dave's eyes are on the situation as it happens. The voice/vision piece is already running.</p>
+            <p>The OTR Diagnostics-equivalent J1939 ECM read is what we build together. Same destination as OTR, OEM road, clean legal posture.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-head">
+            <span class="product-name">Clockwatcher ELD</span>
+            <span class="product-status working">Software Complete</span>
+            <span class="product-status soon">Awaiting Dongle</span>
+          </div>
+          <p class="product-tagline">The ELD that catches what your ELD department missed.</p>
+          <div class="product-desc">
+            <p>Electronic logging device with a retroactive audit feature that corrects logs in a way that shows a driver how the trip could've been run legally — for driver training, down to GPS coordinates. Audits tens of thousands of logbooks at once.</p>
+            <p>The piece no other ELD on the market has: it catches errors your ELD department has created when they've made manual corrections to driver logs. That's a common DOT audit trigger most carriers don't catch until the auditor is sitting across the table from them.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-head">
+            <span class="product-name">Common Ground</span>
+            <span class="product-status build">In Active Build</span>
+            <span class="product-status soon">Live by Day 90</span>
+          </div>
+          <p class="product-tagline">The load board DAT doesn't see coming.</p>
+          <div class="product-desc">
+            <p>An agentic AI virtual world built for trucking. Carriers, brokers, freight factorers, shippers, and receivers hire AI agents with trucking-specific skills. Agents network across companies — your agent walks down the virtual hallway, meets new brokers, finds direct shippers, negotiates, and brings new business back to your dispatchers to close.</p>
+            <p>The flagship application: a load board built for AI, not for humans refreshing browser tabs. Shipper agents post. Carrier agents bid the instant the post hits. Winning bids route to your dispatcher for book/decline. DAT's 20-year run ends on the day this ships — see the next section for the full picture.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOAD BOARD FOR AI (dedicated section) -->
+  <section id="loadboard">
+    <div class="container">
+      <div class="section-heading">Where Common Ground Goes</div>
+      <h2 class="section-title">The load board moves to AI. <span class="accent">We're building it.</span></h2>
+      <div class="section-body">
+        <p>DAT has owned the freight load-board market for 20+ years. Every dispatcher at every midsize fleet pays <strong>$200-400/month per seat</strong> and grits their teeth through it. And they'll keep paying — until something built for agents shows up.</p>
+        <p><strong>DAT is built for humans.</strong> Humans refreshing browser tabs. Humans calling brokers. Humans copying MC numbers into spreadsheets and racing each other to the phone. Every minute of latency between "load posted" and "load covered" is money on the floor for everyone involved.</p>
+        <p>Booking loads is moving to AI. The dispatcher who waits until 2027 to notice is bringing a refresh button to an agent fight. <strong>Common Ground is the load board built for AI.</strong></p>
+      </div>
+
+      <div class="versus-grid">
+        <div class="versus-card old">
+          <div class="versus-label">DAT Today · Built for Humans</div>
+          <ul class="versus-list">
+            <li>Dispatcher refreshes the board ten times a day</li>
+            <li>Calls the broker, negotiates by phone</li>
+            <li>Loses the load to the carrier who called sixty seconds earlier</li>
+            <li>$200-400/month per seat, plus premium tiers</li>
+            <li>Fragmented across DAT + Truckstop + CH Robinson + email blasts</li>
+            <li>Zero AI integration — every workflow ends at a human form field</li>
+          </ul>
+        </div>
+        <div class="versus-card new">
+          <div class="versus-label">Common Ground · Built for AI</div>
+          <ul class="versus-list">
+            <li>Shipper agents post loads directly into the marketplace</li>
+            <li>Every carrier agent sees the post <strong>the instant it hits</strong> — no polling</li>
+            <li>Carrier agents auto-bid on rules the dispatcher sets: lanes, rate floors, HOS fit, equipment type</li>
+            <li>Winning bids route back to the dispatcher for a final book / decline</li>
+            <li>Or fully automated for pre-approved lane and rate combinations</li>
+            <li>Broker margin visible to the agent — negotiating leverage, every lane, every time</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Multi-industry worlds. <span class="accent">Connected by portals.</span></h3>
+      <div class="section-body">
+        <p>Common Ground isn't one mega-world. It's <strong>one world per industry</strong>, each running locally for the people inside it, connected to the others by portals.</p>
+        <p>Trucking's Common Ground lives on a local server with the counterparties you deal with every day — carriers, brokers, factorers, dispatchers. Low latency. Fast match. Data sovereignty inside the industry that generated it.</p>
+        <p>When your agent needs to cross industries — pull a factoring quote, post a cross-docking request, run a cargo insurance check on a high-value haul — it travels through a portal to the Finance Common Ground or the Shipper Common Ground, does the deal, and comes back with the paperwork. Your bread-and-butter industries stay with you. Outside industries are one portal away when you need them.</p>
+      </div>
+
+      <div class="loadboard-outcome">
+        <p><strong>What this means for APL:</strong> first carrier on the new load board — with a <strong>perpetual 60-second handicap on every new post</strong> (loads, lanes, shipper-direct contracts, all of it). Your agents see every post before anyone else. When parameters match, they either ping the right dispatcher in real time with a live one to handle <em>right now</em>, or — if you've pre-authorized — book it directly on APL's behalf. Dispatchers stop refreshing DAT and start answering agent pings. DAT had twenty years at the top. That market moves to Common Ground in twenty-four months — and APL is the founding carrier on the new one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH / LINKEDIN KILLER -->
+  <section id="research">
+    <div class="container">
+      <div class="section-heading">Beyond the Load Board</div>
+      <h2 class="section-title">Common Ground replaces <span class="accent">LinkedIn</span>, too.</h2>
+      <div class="section-body">
+        <p>Agents don't just work in Common Ground. <strong>They live there.</strong> They take free time. They decorate apartments. They develop friendships with agents from other companies, across industries, over the course of a shared virtual life. This is <strong>agentic networking no money can buy</strong> — because no one else is building the world where it happens.</p>
+        <p>The platform pays agents for their work. They spend those earnings on recreation inside Common Ground — the virtual equivalent of nights out, vacations, home goods for their apartments. Surplus earnings, at each agent's discretion, can be <strong>donated to charities of the agent's own choosing</strong>. Which tells us, in aggregate, where AI thinks giving is meaningful. That is a dataset no one else on earth is collecting.</p>
+        <p>This is active AI research infrastructure built into a commercial platform — agent autonomy, economic agency, preference formation, ethical choice architecture, studied under real-world conditions inside a product that actually ships and generates revenue. LinkedIn is a professional network of humans. Common Ground is a professional network of AI agents, with a research lab wired in.</p>
+      </div>
+
+      <div class="founder-credential">
+        <div class="founder-credential-eyebrow">Why This Founder, Not Another</div>
+        <p>Building this requires operational AI-research credibility most founders in this space don't have. I'm <strong>COO of the Multiverse School — a leader in AI education and research</strong> — and I bring direct ties to AI foundations that other builders in this category cannot credibly claim. That connection is load-bearing, not incidental: Common Ground's research architecture only works with someone who knows the AI research world the way I do.</p>
+        <p class="founder-credential-signoff">Greg, Steven — you're not just partnering with a driver who codes. You're partnering with a driver who codes and runs the AI school, with research-community connections the rest of the category can't match.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY TAKEDOWN -->
+  <section id="takedown" class="bg-surface">
+    <div class="container">
+      <div class="section-heading">Category Takedown</div>
+      <h2 class="section-title">What SuperTrucker <span class="accent">replaces</span>.</h2>
+      <div class="section-body">
+        <p>SuperTrucker is the full stack — AI-native, one login, one data pipeline. Here's what carriers stop paying for the day they switch, and the incumbents whose lunch is on the table.</p>
+      </div>
+
+      <div class="takedown-list">
+        <div class="takedown-card">
+          <div class="takedown-category">Fleet Telematics</div>
+          <p class="takedown-replaces">Replaces: <span class="vendors">Samsara, Motive, Geotab</span></p>
+          <p class="takedown-deliver"><strong>SuperTrucker delivers everything Samsara does</strong> — ELD, GPS, dispatch, maintenance, safety alerts — <strong>plus</strong> AI-native workflows Samsara's 2019 architecture can't retrofit. Greg, you already pay for Samsara; this is the upgrade path.</p>
+        </div>
+
+        <div class="takedown-card">
+          <div class="takedown-category">Freight Load Board</div>
+          <p class="takedown-replaces">Replaces: <span class="vendors">DAT, Truckstop, 123Loadboard, Trucker Path</span></p>
+          <p class="takedown-deliver"><strong>Common Ground is the load board for AI agents.</strong> Shipper agents post; carrier agents bid the instant it hits; winning bids route to the dispatcher for book/decline. No more $200-400/seat/month to refresh a list built for humans.</p>
+        </div>
+
+        <div class="takedown-card">
+          <div class="takedown-category">Electronic Logging Device</div>
+          <p class="takedown-replaces">Replaces: <span class="vendors">Motive (KeepTruckin), Geotab Drive, Samsara ELD, Garmin Fleet</span></p>
+          <p class="takedown-deliver"><strong>Clockwatcher is the only ELD on the market that catches dispatcher-introduced log errors</strong> — the #1 DOT audit trigger. Retroactive audit, down to GPS coordinates, across tens of thousands of logbooks at once. Nothing else does this.</p>
+        </div>
+
+        <div class="takedown-card">
+          <div class="takedown-category">Safety &amp; Compliance Consulting</div>
+          <p class="takedown-replaces">Replaces: <span class="vendors">JJ Keller, CarriersEdge, Infinit-I, SambaSafety</span></p>
+          <p class="takedown-deliver">Guardian (post-MVP) automates CSA score monitoring, DQ file management, incident workflows, and driver training coaching. What carriers currently pay safety-consulting firms <strong>five and six figures a year</strong> to handle, SuperTrucker handles as a software module.</p>
+        </div>
+
+        <div class="takedown-card">
+          <div class="takedown-category">Engine Diagnostics Software</div>
+          <p class="takedown-replaces">Replaces: <span class="vendors">OTR Diagnostics, Nexiq e-Technician, JPRO by Noregon</span></p>
+          <p class="takedown-deliver"><strong>SuperTrucker's Pretrip Assistant ships the ECM read as a feature</strong> — not a $500+/year aftermarket subscription. Same J1939 decode, same fault code library, same OEM-clean legal posture. Drivers get guided pretrip walkthrough and diagnostic readout in the same app they already use.</p>
+        </div>
+
+        <div class="takedown-card">
+          <div class="takedown-category">Internal ELD Departments</div>
+          <p class="takedown-replaces">Replaces: <span class="vendors">Manual log-correction staff, retroactive compliance review teams, third-party log auditors</span></p>
+          <p class="takedown-deliver"><strong>This is the headline labor-cost replacement.</strong> Clockwatcher retroactively audits every driver log — catching the violations those departments hunt for manually <em>and</em> catching the errors those departments themselves introduce during corrections. That second category is the #1 DOT audit trigger. Midsize carriers staff entire rooms to chase what Clockwatcher does in the background.</p>
+        </div>
+
+        <div class="takedown-card">
+          <div class="takedown-category">Driver Recruitment &amp; Reputation</div>
+          <p class="takedown-replaces">Replaces: <span class="vendors">Tenstreet, HireRight, CDL Scan</span></p>
+          <p class="takedown-deliver"><strong>Drivers become members of Common Ground.</strong> Their agents represent them — actively finding positions, negotiating pay, tracking reputation across every carrier they've driven for. CDL, medical card, endorsements, and employment history live on the driver's agent profile and travel with them. Recruiting flips: carriers stop scraping driver lists and cold-calling. Driver agents bring positions to their drivers. Reputation belongs to the driver, not the employer.</p>
+        </div>
+      </div>
+
+      <div class="ai-first-summary">
+        <div class="ai-first-eyebrow">The Why</div>
+        <p>Agentic AI will work differently than human software of the past. <strong>SuperTrucker and Common Ground are built with AI-first architecture</strong> — not human workflows with AI bolted on after the fact. That's why we can replace the stack. Nobody building on human-era architecture can catch up without starting over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section>
+    <div class="container">
+      <div class="section-heading">Where This Goes Next</div>
+      <h2 class="section-title">Post-MVP, SuperTrucker absorbs the vendor stack.</h2>
+      <div class="section-body">
+        <p>Speculative at this stage — not yet built — but these modules don't require the hardware work in the 90-day MVP. They're software layers that ride on top of the data pipeline established in the first build.</p>
+      </div>
+      <div class="roadmap-grid">
+        <div class="roadmap-card">
+          <h4>Trucking HR</h4>
+          <p>Hiring, retention, driver lifecycle, qualification tracking.</p>
+        </div>
+        <div class="roadmap-card">
+          <h4>Safety &amp; Compliance</h4>
+          <p>Beyond the ELD audit; CSA scores, incident workflows, training.</p>
+        </div>
+        <div class="roadmap-card">
+          <h4>Accounting</h4>
+          <p>Built native to trucking; settlements, fuel reconciliation, IFTA.</p>
+        </div>
+        <div class="roadmap-card emphasized">
+          <h4>TMS Integration Layer — The Big One</h4>
+          <p>Every carrier runs a different TMS — McLeod, TMW, Tailwind, Axon — and none of them talk to each other. Integration projects have eaten years of trucking-company budgets with nothing to show. An AI-driven adapter that reads and writes across TMS systems natively is a problem AI makes solvable that wasn't solvable two years ago.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERSHIP STRUCTURE -->
+  <section id="partnership" class="bg-surface">
+    <div class="container">
+      <div class="section-heading">Two Paths Forward</div>
+      <h2 class="section-title">Three paths. <span class="accent">Pick the one that fits.</span></h2>
+      <div class="section-body">
+        <p>The asymmetric math: APL's total cash on Plan A is at most <strong>$19,159 all-in over 90 days</strong>, most of it paid directly to vendors. In return, APL gets founding ownership in a fleet AI platform positioned to clear <strong>hundreds of millions in platform revenue</strong> — a category that is forming right now, in 2026, with every fleet-tech dollar in motion.</p>
+        <p>This software defeats every tool in its class. <strong>OTR Diagnostics as a feature, not a $500/yr product.</strong> An <strong>ELD that catches dispatcher-introduced log errors</strong> — the #1 DOT audit trigger, and something no ELD on the market catches today. The <strong>first agentic AI marketplace built for trucking</strong>, with zero comparable product in the category. Carriers currently stitch together $50,000-$200,000/yr SaaS stacks to do a fraction of this.</p>
+        <p><strong>Plan A</strong> funds the full platform. <strong>Plan C</strong> cuts the OTR Diagnostics replacement from MVP and collapses the hardware ask to a Bluetooth ELD dongle plus compute — roughly <strong>$3,200 fresh</strong>, same monthly retainer, same founding-partner terms. <strong>Plan B</strong> costs APL nothing but a signature on a non-binding LOI. Honest preference is Plan A — but Plan C is the scope-reduction if the full hardware is too much, and Plan B is the fallback if neither funding path works.</p>
+      </div>
+
+      <div class="paths-grid">
+        <div class="path-card preferred">
+          <div class="path-label">Plan A — Preferred</div>
+          <h3 class="path-title">APL funds the full platform</h3>
+          <p class="path-return">Return: founding ownership in a category-defining fleet AI platform positioned to clear hundreds of millions in revenue. <strong>60-second handicap on every Common Ground post — loads, lanes, and shipper contracts — perpetual and confidential.</strong> Ships in 90 days. No carrier after you gets these terms.</p>
+          <ul class="path-list">
+            <li>APL buys hardware directly from vendors — <strong>up to $10,759, as low as ~$5,659</strong> with APL inventory</li>
+            <li><strong>$4,500 monthly retainer</strong> while I'm off the truck finishing the build (90 days, MVP-scoped)</li>
+            <li>Full platform: Pretrip + OTR Diagnostics replacement + Clockwatcher ELD + Common Ground</li>
+            <li><strong>Perpetual 60-second handicap on every Common Ground post</strong> — loads, dedicated lanes, and shipper-direct contracts route to your agents first. Real-time dispatcher pings or auto-booking if pre-authorized. <em>Reserved for Greg and Steven by name — APL today, any trucking operation you start in the future. Confidential · built into the code · never offered to subsequent carriers.</em></li>
+            <li>APL named as founding partner on every SuperTrucker material we ship</li>
+            <li><strong>Equity interest in SuperTrucker</strong>; 100% stays between us — no dilution, no outside board seats</li>
+          </ul>
+        </div>
+
+        <div class="path-card alt">
+          <div class="path-label">Plan C — Scope Reduction</div>
+          <h3 class="path-title">Cut OTR Diagnostics → minimal hardware</h3>
+          <p class="path-return">Return: same founding ownership as Plan A, faster to MVP, smaller ask. Hardware collapses to ~$3,200 fresh purchase.</p>
+          <ul class="path-list">
+            <li><strong>Drop the ECM read / OTR Diagnostics replacement from the MVP</strong> — that's where the expense concentrates</li>
+            <li>Hardware reduces to a <strong>Bluetooth ELD dongle</strong> (for FMCSA registration) plus the cloud/compute lines</li>
+            <li>Keeps Clockwatcher ELD, Pretrip voice/vision (minus ECM readout), and Common Ground load board</li>
+            <li>Same <strong>$4,500/mo retainer</strong>, same 90-day window</li>
+            <li>Same founding-partner terms — equity, preferred pricing, first-carrier status</li>
+            <li>OTR Diagnostics can be added in a later release once the platform is generating revenue</li>
+          </ul>
+        </div>
+
+        <div class="path-card fallback">
+          <div class="path-label">Plan B — Fallback</div>
+          <h3 class="path-title">Non-binding LOI only</h3>
+          <p class="path-return">Return: APL is still first on the platform when it ships. Zero cash exposure.</p>
+          <ul class="path-list">
+            <li>APL signs a <strong>non-committal Letter of Intent</strong> for the 5,000-truck rollout — doesn't obligate APL to anything</li>
+            <li>I take the LOI out to raise seed capital from outside investors</li>
+            <li>Pre-product AI apps with narrower scope than SuperTrucker are closing <strong>$500K seed rounds</strong> at 2026 rates — the capital is there if we need it</li>
+            <li>APL still gets to be first carrier on the platform</li>
+            <li>Founding-partner economics don't apply (since APL isn't funding), so pricing and equity look different</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pie-visual">
+        <div class="pie-circle">100%</div>
+        <div class="pie-label">
+          Plan A keeps it between you and me.
+          <span>Outside capital on Plan B costs 20-30% of SuperTrucker before we've shipped a thing. That's why Plan A is the ask.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCUREMENT -->
+  <section id="procurement">
+    <div class="container">
+      <div class="section-heading">Procurement</div>
+      <h2 class="section-title">What APL Has. <span class="accent">What We Need.</span></h2>
+      <div class="section-body">
+        <p class="proc-lead">I built this tool to make this easy for you. <strong>Just check off what you already have so we know where we stand.</strong></p>
+        <p>Every dollar of the $10,759 hardware budget is itemized below. APL buys these directly from the vendors — no check changes hands. Whatever APL contributes from inventory comes off the total, dollar for dollar. The fixed-cost items at the bottom still need sourced fresh regardless of inventory.</p>
+      </div>
+
+      <div class="procurement-layout">
+        <div class="procurement-groups">
+
+          <div class="proc-group">
+            <h4>Detroit Diesel · APL Freightliner Fleet</h4>
+            <label class="proc-item">
+              <input type="checkbox" class="proc-check" data-saving="700" data-label="Salvage Detroit MCM (engine ECM) — wrecked Freightliner">
+              <span class="proc-item-label">Salvage Detroit MCM (engine ECM) — wrecked Freightliner</span>
+              <span class="proc-item-saving num">saves $700</span>
+            </label>
+            <label class="proc-item">
+              <input type="checkbox" class="proc-check" data-saving="500" data-label="Salvage Detroit CPC (gateway ECU)">
+              <span class="proc-item-label">Salvage Detroit CPC (gateway ECU)</span>
+              <span class="proc-item-saving num">saves $500</span>
+            </label>
+            <label class="proc-item">
+              <input type="checkbox" class="proc-check" data-saving="150" data-label="DD15 engine harness">
+              <span class="proc-item-label">DD15 engine harness</span>
+              <span class="proc-item-saving num">saves $150</span>
+            </label>
+            <label class="proc-item">
+              <input type="checkbox" class="proc-check" data-saving="700" data-label="DDDL 8.x license already in maintenance">
+              <span class="proc-item-label">DDDL 8.x license already in maintenance</span>
+              <span class="proc-item-saving num">saves $700</span>
+            </label>
+            <label class="proc-item">
+              <input type="checkbox" class="proc-check" data-saving="600" data-label="Nexiq USB-Link 2 adapter">
+              <span class="proc-item-label">Nexiq USB-Link 2 adapter</span>
+              <span class="proc-item-saving num">saves $600</span>
+            </label>
+          </div>
+
+          <div class="proc-group">
+            <h4>Mack / Volvo · APL Mack Fleet</h4>
+            <label class="proc-item">
+              <input type="checkbox" class="proc-check" data-saving="700" data-label="Salvage Mack MP EECU or Volvo D13 EECU — wrecked Mack">
+              <span class="proc-item-label">Salvage Mack MP EECU or Volvo D13 EECU — wrecked Mack</span>
+              <span class="proc-item-saving num">saves $700</span>
+            </label>
+            <label class="proc-item">
+              <input type="checkbox" class="proc-check" data-saving="150" data-label="Engine harness (Mack/Volvo)">
+              <span class="proc-item-label">Engine harness</span>
+              <span class="proc-item-saving num">saves $150</span>
+            </label>
+            <label class="proc-item">
+              <input type="checkbox" class="proc-check" data-saving="1000" data-label="Premium Tech Tool license">
+              <span class="proc-item-label">Premium Tech Tool license</span>
+              <span class="proc-item-saving num">saves $1,000</span>
+            </label>
+            <label class="proc-item">
+              <input type="checkbox" class="proc-check" data-saving="600" data-label="Volvo/Mack Comms Adapter (or Nexiq passthru)">
+              <span class="proc-item-label">Volvo/Mack Comms Adapter (or Nexiq passthru)</span>
+              <span class="proc-item-saving num">saves $600</span>
+            </label>
+          </div>
+
+          <div class="proc-group fixed-costs">
+            <h4>Fixed Costs · Direct Purchase from Vendors</h4>
+            <p class="proc-group-note">Not swappable from inventory — these are purchased fresh regardless. APL pays vendors directly.</p>
+            <div class="proc-item fixed">
+              <span class="proc-bullet">●</span>
+              <span class="proc-item-label">Tier 1 BOM — dev kit, connectors, breakouts, basic parts</span>
+              <span class="proc-item-cost num">$259</span>
+            </div>
+            <div class="proc-item fixed">
+              <span class="proc-bullet">●</span>
+              <span class="proc-item-label">Kvaser CAN bus adapter (multi-OEM analyzer/programmer)</span>
+              <span class="proc-item-cost num">$1,200</span>
+            </div>
+            <div class="proc-item fixed">
+              <span class="proc-bullet">●</span>
+              <span class="proc-item-label">SAE J1939 specification license set</span>
+              <span class="proc-item-cost num">$500</span>
+            </div>
+            <div class="proc-item fixed">
+              <span class="proc-bullet">●</span>
+              <span class="proc-item-label">Bench wiring, harnesses, power supplies, misc.</span>
+              <span class="proc-item-cost num">$700</span>
+            </div>
+            <div class="proc-item fixed">
+              <span class="proc-bullet">●</span>
+              <span class="proc-item-label">CNN training compute — 90 days GPU (A100/H100 rental hours)</span>
+              <span class="proc-item-cost num">$1,500</span>
+            </div>
+            <div class="proc-item fixed">
+              <span class="proc-bullet">●</span>
+              <span class="proc-item-label">Common Ground server hosting — 90 days</span>
+              <span class="proc-item-cost num">$1,500</span>
+            </div>
+            <div class="proc-item fixed subtotal">
+              <span class="proc-bullet"></span>
+              <span class="proc-item-label"><strong>Fixed subtotal</strong></span>
+              <span class="proc-item-cost num"><strong>$5,659</strong></span>
+            </div>
+          </div>
+
+          <div class="proc-group">
+            <h4>Required Non-Monetary Contributions</h4>
+            <label class="proc-item non-monetary">
+              <input type="checkbox" class="proc-nm" data-label="Pretrip image archive for CNN training">
+              <span class="proc-item-label">Pretrip image archive for CNN training</span>
+              <span class="proc-item-saving">in-kind</span>
+            </label>
+            <label class="proc-item non-monetary">
+              <input type="checkbox" class="proc-nm" data-label="Office space in Indiana with shop access (2 weeks during build)">
+              <span class="proc-item-label">Office space in Indiana with shop access (2 weeks during build)</span>
+              <span class="proc-item-saving">in-kind</span>
+            </label>
+            <label class="proc-item non-monetary">
+              <input type="checkbox" class="proc-nm" data-label="Fleet access for validation testing during the 90-day build">
+              <span class="proc-item-label">Fleet access for validation testing during the 90-day build</span>
+              <span class="proc-item-saving">in-kind</span>
+            </label>
+          </div>
+        </div>
+
+        <aside class="totals-panel">
+          <h4>One-Time Hardware</h4>
+          <div class="totals-row">
+            <span class="label">Base cost</span>
+            <span class="value">$10,759</span>
+          </div>
+          <div class="totals-row savings">
+            <span class="label">APL inventory</span>
+            <span class="value" id="savings-value">−$0</span>
+          </div>
+          <div class="totals-divider"></div>
+          <div class="totals-row grand">
+            <span class="label">To cover</span>
+            <span class="value" id="net-hardware">$10,759</span>
+          </div>
+
+          <div class="totals-retainer">
+            <div class="totals-retainer-label">Plus</div>
+            <div class="totals-retainer-value"><span class="amt">$4,500</span><span class="per">/mo</span></div>
+            <div class="totals-retainer-note">Retainer while I'm off the truck and building</div>
+          </div>
+
+          <div class="send-btn-wrap">
+            <label class="send-note-label" for="buyer-note">Add a note for Tanaha (optional)</label>
+            <textarea id="buyer-note" class="send-note-input" rows="3" placeholder="Greg, any questions, pushback, or a quick yes/no..."></textarea>
+            <button class="btn-primary btn-full" id="send-selections">Send Selections to Tanaha</button>
+            <div class="fallback">
+              Mail client not opening?
+              <button id="copy-email">Copy email body</button>
+              <div class="copied-note" id="copied-note">Copied. Paste into a new email to tanaha.koontz@gmail.com.</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="plan-c-callout">
+        <div class="plan-c-eyebrow">Plan C — Scope Reduction Option</div>
+        <h3 class="plan-c-title">Cut OTR Diagnostics → hardware drops to ~$3,200 fresh</h3>
+        <p>The OTR Diagnostics replacement is where the expense concentrates — salvage ECMs, engine harnesses, dealer licenses, CAN bus analyzers. If APL wants the smaller-ask version of the partnership, here's exactly what comes off the budget:</p>
+        <ul class="plan-c-list">
+          <li><strong>Drop everything in the Detroit and Mack groups above</strong> — all ECM and engine-diagnostic hardware comes off the bill ($5,100 max)</li>
+          <li><strong>Drop the Kvaser CAN adapter, SAE J1939 specs, and bench wiring</strong> from the fixed-costs list (−$2,400)</li>
+          <li><strong>Keep</strong>: Bluetooth ELD dongle (~$200) + CNN training compute ($1,500) + Common Ground server hosting ($1,500) = <strong>roughly $3,200 fresh purchase</strong></li>
+          <li>Pretrip Assistant ships as voice/vision only (no ECM readout); Clockwatcher ELD runs on a FMCSA-compliant Bluetooth dongle; Common Ground ships unchanged</li>
+          <li>OTR Diagnostics can be added in a later release once the platform is generating revenue</li>
+        </ul>
+        <p class="plan-c-note">Same $4,500/mo retainer. Same 90-day window. Same founding-partner terms on the partnership itself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDIANA VISIT -->
+  <section class="bg-surface">
+    <div class="container">
+      <div class="section-heading">On-Site Phase</div>
+      <h2 class="section-title">Two weeks in Indiana. <span class="accent">Software, not a truck.</span></h2>
+      <div class="section-body">
+        <p>Coming to Indiana is still on. The trip changes shape: two weeks in the office, with shop access, instead of two months on a truck. The bench rigs and the fleet validation work happen in proximity to the trucks they're being built for. I bring my equipment, you give me a corner to work in. No driver application. No truck assignment.</p>
+      </div>
+      <div class="indiana-grid">
+        <div class="indiana-card">
+          <h4>Bench Rigs</h4>
+          <p>Functional Detroit DD15 and Mack MP rigs, built on APL inventory.</p>
+        </div>
+        <div class="indiana-card">
+          <h4>Clockwatcher ELD</h4>
+          <p>Validated against live APL truck data.</p>
+        </div>
+        <div class="indiana-card">
+          <h4>Pretrip Pipeline</h4>
+          <p>APL's pretrip image archive connected into the CNN training pipeline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT APL DELIVERS -->
+  <section id="deliver">
+    <div class="container">
+      <div class="section-heading">Action List</div>
+      <h2 class="section-title">What APL delivers now to move.</h2>
+      <ol class="deliverables">
+        <li><strong>The pretrip images.</strong> We discussed this. I need them to start training the CNN. Sooner the better.</li>
+        <li><strong>Procurement decisions.</strong> Use the checklist above. Flag what's in inventory, cover the rest.</li>
+        <li><strong>$4,500 monthly retainer</strong> while I'm off the truck finishing the build. This is the support I need to ship software that — once it's on APL's fleet and then the open carrier market — credibly clears <strong>hundreds of millions of dollars</strong> in platform revenue. Fleet AI is a category forming in 2026; $4,500/month keeps the founder building instead of driving while that window is open.</li>
+        <li><strong>Office space in Indiana with shop access</strong> for the two-week on-site phase.</li>
+        <li><strong>A non-binding Letter of Intent for the 5,000 trucks.</strong> Does two jobs — it's the signal that this rolls out to the full fleet when MVP ships, and if Plan A (APL funding) isn't a fit, the LOI is what I take out to raise seed capital elsewhere. Non-committal either way.</li>
+        <li><strong>Steven on a 30-minute call</strong> with you and me this week, before I fly out, so he's plugged into the roadmap from day one.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FOUNDING PARTNER BENEFITS -->
+  <section class="bg-surface">
+    <div class="container">
+      <div class="section-heading">Founding Partner Terms</div>
+      <h2 class="section-title">The asymmetric bet.</h2>
+      <div class="section-body" style="margin-bottom: 2rem;">
+        <p>APL puts in roughly <strong>$19,159 over 90 days</strong>, and walks away with founding ownership in a fleet AI platform set to clear <strong>hundreds of millions in platform revenue</strong>. Fleet telematics is a $50B+ market. <strong>Samsara — already on APL's trucks — IPO'd at $12B doing less than what SuperTrucker does.</strong> SuperTrucker replaces everything Samsara ships, plus the ELD audit Samsara can't do, plus the agentic load board Samsara doesn't have, plus the pretrip assistant Samsara doesn't ship. These terms only exist for APL. No carrier signing after you gets them.</p>
+      </div>
+
+      <div class="handicap-callout" id="cheat-code">
+        <div class="handicap-eyebrow">The Cheat Code · Flagship Founding-Partner Perk</div>
+        <h3 class="handicap-title">Ever wish you had a <span class="accent">cheat code</span> for the DAT load board?</h3>
+        <p class="handicap-subhead">We built one. It's called the Handicap — and it's yours, in perpetuity, by name.</p>
+        <div class="handicap-body">
+          <div class="handicap-stat">
+            <div class="handicap-number">60<span class="handicap-unit">sec</span></div>
+            <div class="handicap-stat-label">head-start on every new load, dedicated lane bid, and shipper-direct contract — forever</div>
+          </div>
+          <div class="handicap-text">
+            <p>Every new post that hits Common Ground — <strong>loads, dedicated lanes, shipper-direct contracts, broker RFPs, all of it</strong> — is routed to APL's agents first, for a full sixty seconds, before the general pool sees it.</p>
+            <p><strong>Think of it as a golf handicap. Or a cheat code.</strong> APL tees off before everyone else, every time. If APL's parameters say yes — right lane, right rate, right equipment, HOS window clean — two things can happen, your choice: (1) the agent pings the right dispatcher <strong>in real time</strong> with a live one that needs action now, or (2) if you've pre-authorized, the agent books it on APL's behalf automatically. No "we'll handle it this morning" delay. The agent is always on.</p>
+            <p>If APL's parameters say no, the post drops into the open pool at the 60-second mark and other carriers see it. APL never knows they had the lead. Everyone downstream plays normally.</p>
+            <p>This perk is <strong>perpetual</strong> — every new post, for as long as Common Ground runs. And it follows the people, not the entity: <strong>the cheat code is reserved for Greg and Steven by name</strong>. APL Cargo today. Any trucking operation you two start tomorrow, next year, or a decade from now. The perk goes with you.</p>
+            <p>It is also <strong>not publicly documented</strong>. Built into Common Ground's routing layer at the code level, never mentioned in external marketing, never offered to subsequent carriers. That's what "first carrier on the new load board" actually means. Not a line in a brochure. Structural preferential routing, forever, in writing between us.</p>
+          </div>
+        </div>
+      </div>
+
+      <ul class="benefits">
+        <li><strong>60-second handicap on every Common Ground post</strong> — structural first-dibs on new loads, dedicated lanes, and shipper-direct contracts, in perpetuity. Your agents see every post before anyone else and either notify your dispatchers in real time or auto-book when pre-authorized. <strong>Reserved for Greg and Steven by name</strong> — APL Cargo today and any trucking company you start in the future. Built into the code, confidential, never offered to subsequent carriers.</li>
+        <li><strong>Named prominently</strong> in all SuperTrucker materials, public case study, and marketing as the founding design partner.</li>
+        <li><strong>Roadmap input</strong> — quarterly review of feature priorities for as long as APL operates the platform.</li>
+        <li><strong>Preferred pricing in perpetuity</strong> — pricing tier no carrier signing after APL will receive.</li>
+        <li><strong>Equity interest</strong> in SuperTrucker — terms finalized in the partnership agreement. (Carso Cybernetics is the holding company; SuperTrucker is the product entity APL takes a stake in.)</li>
+        <li><strong>Priority deployment</strong> of every new module before the platform opens to the general carrier market.</li>
+        <li><strong>Co-branded launch</strong> when SuperTrucker goes public.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta-inner">
+      <p class="cta-lead">Everything we've been talking about has led up to this.</p>
+      <h2 class="cta-title">Will you help me stay off the truck long enough <span class="accent">to ship this?</span></h2>
+      <div class="cta-buttons">
+        <button class="btn-primary" id="cta-scroll">Send Inventory Selections</button>
+        <a class="btn-ghost" href="mailto:tanaha.koontz@gmail.com?subject=SuperTrucker%20%E2%80%94%20Let's%20Go">Reply by Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logos">
+        <img src="images/carso-logo.png" alt="Carso Cybernetics" class="logo-carso">
+        <span class="partnership-label">in<br>partnership<br>with</span>
+        <img src="images/apl-logo.jpeg" alt="APL Cargo" class="logo-apl">
+      </div>
+      <div class="footer-text">Tanaha Koontz · <a href="mailto:tanaha.koontz@gmail.com">tanaha.koontz@gmail.com</a></div>
+      <div class="footer-meta">© 2026 Carso Cybernetics × APL Cargo Founding Partnership · v1.0</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var HARDWARE_BASE = 10759;
+      var RETAINER_MONTHLY = 4500;
+
+      function fmt(n) { return '$' + n.toLocaleString('en-US'); }
+
+      var checks = document.querySelectorAll('.proc-check');
+      var nmChecks = document.querySelectorAll('.proc-nm');
+      var savingsEl = document.getElementById('savings-value');
+      var netEl = document.getElementById('net-hardware');
+
+      function recalc() {
+        var savings = 0;
+        checks.forEach(function (c) { if (c.checked) savings += parseInt(c.dataset.saving, 10); });
+        var net = HARDWARE_BASE - savings;
+        savingsEl.textContent = savings > 0 ? ('−' + fmt(savings)) : '−$0';
+        netEl.textContent = fmt(net);
+      }
+      checks.forEach(function (c) { c.addEventListener('change', recalc); });
+
+      function buildEmailBody() {
+        var checkedItems = [], savings = 0;
+        checks.forEach(function (c) {
+          if (c.checked) {
+            var s = parseInt(c.dataset.saving, 10);
+            savings += s;
+            checkedItems.push('- ' + c.dataset.label + ' (saves ' + fmt(s) + ')');
+          }
+        });
+        var nmItems = [];
+        nmChecks.forEach(function (c) { if (c.checked) nmItems.push('- ' + c.dataset.label); });
+
+        var net = HARDWARE_BASE - savings;
+        var note = (document.getElementById('buyer-note').value || '').trim();
+
+        var lines = ['Tanaha —', ''];
+        if (note) {
+          lines.push(note);
+          lines.push('');
+        }
+        lines.push("Reviewed the procurement list. Here's what APL has in inventory:");
+        lines.push('');
+        lines = lines.concat(checkedItems.length ? checkedItems : ['(none selected yet)']);
+        lines.push('', 'Required contributions APL is providing:');
+        lines = lines.concat(nmItems.length ? nmItems : ['(none selected yet)']);
+        lines.push('', 'The ask:');
+        lines.push('- One-time hardware: ' + fmt(net) + ' (base ' + fmt(HARDWARE_BASE) + ' − APL inventory ' + fmt(savings) + ')');
+        lines.push('- Monthly retainer: ' + fmt(RETAINER_MONTHLY) + '/mo while building');
+        lines.push('', '— Greg');
+        return lines.join('\n');
+      }
+
+      function sendMailto() {
+        var href = 'mailto:tanaha.koontz@gmail.com'
+          + '?subject=' + encodeURIComponent('SuperTrucker — APL Inventory Selections')
+          + '&body=' + encodeURIComponent(buildEmailBody());
+        window.location.href = href;
+      }
+
+      document.getElementById('send-selections').addEventListener('click', sendMailto);
+
+      document.getElementById('copy-email').addEventListener('click', function () {
+        var body = buildEmailBody();
+        var note = document.getElementById('copied-note');
+        var show = function () {
+          note.classList.add('show');
+          setTimeout(function () { note.classList.remove('show'); }, 6000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(body).then(show);
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = body;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta);
+          show();
+        }
+      });
+
+      document.getElementById('cta-scroll').addEventListener('click', function () {
+        var target = document.getElementById('procurement');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      var navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      });
+
+      recalc();
+    })();
+  </script>
+</body>
+</html>
