@@ -268,6 +268,46 @@
     .hero-text-backdrop .hero-title { text-shadow: none; margin-bottom: 1rem; }
     .hero-text-backdrop .hero-sub { text-shadow: none; color: var(--text); }
 
+    .hero-points {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .hero-points li {
+      position: relative;
+      padding-left: 1.6rem;
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.55;
+      max-width: 640px;
+    }
+    .hero-points li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--yellow);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .hero-points strong { color: var(--yellow); font-weight: 700; }
+    .hero-tag {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-style: italic;
+      letter-spacing: 0.03em;
+      margin: 0;
+      padding-top: 0.9rem;
+      border-top: 1px solid var(--border);
+      max-width: 640px;
+    }
+    @media (max-width: 600px) {
+      .hero-points li { font-size: 1rem; padding-left: 1.4rem; }
+    }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -1190,9 +1230,12 @@
           Built by a driver.<br>
           In partnership with <span class="accent">APL Cargo</span>.
         </h1>
-        <p class="hero-sub">
-          Founding ownership in a fleet AI platform positioned to replace <strong>Samsara, DAT, Motive, and JJ Keller</strong>. Samsara — already on APL's trucks — IPO'd at <strong>$12 billion</strong> shipping a feature set SuperTrucker's MVP matches and extends. MVP ships in 90 days. This is the partnership proposal.
-        </p>
+        <ul class="hero-points">
+          <li>Founding ownership in a fleet AI platform positioned to replace <strong>Samsara, DAT, Motive, and JJ Keller</strong>.</li>
+          <li>Samsara — already on APL's trucks — IPO'd at <strong>$12 billion</strong> shipping a feature set SuperTrucker's MVP matches and extends.</li>
+          <li><strong>MVP ships in 90 days.</strong></li>
+        </ul>
+        <p class="hero-tag">This is the partnership proposal.</p>
       </div>
     </div>
 
